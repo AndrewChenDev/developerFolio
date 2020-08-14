@@ -4,24 +4,21 @@
 FROM node:10.16.0-alpine
 
 # Set the working directory to ./app
-WORKDIR ./app
+WORKDIR ./app/temp
 
 # Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-
+COPY package.json ./
+COPY yarn.lock ./
 # Install any needed packages
-RUN npm install
-
-# Audit fix npm packages
-RUN npm audit fix
-
+RUN yarn global add serve
+RUN yarn install
+COPY . ./
+#create build
+RUN yarn run build
+RUN mv ./build/* ../
 # Bundle app source
-COPY . /app
 
-# Make port 3000 available to the world outside this container
-EXPOSE 3000
-
+WORKDIR /app
+RUN rm -rf /app/temp
 # Run app.js when the container launches
-CMD ["npm", "start"]
+CMD ["serve", "-l","3000"]
