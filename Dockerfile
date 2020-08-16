@@ -24,7 +24,4 @@ RUN /usr/local/bin/node-prune
 FROM node:current-alpine
 
 WORKDIR /app
-
-RUN yarn global add serve
 COPY --from=BUILD_IMAGE /app/build ./
-CMD ["serve", "-l","3000"]
