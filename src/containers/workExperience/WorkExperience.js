@@ -31,6 +31,27 @@ export default function WorkExperience() {
                         </div>
                     </div>
                 </div>
+                <div className="experience-container" id="volunteerExperience">
+                    <div>
+                        <h1 className="experience-heading">Volunteer Experiences</h1>
+                        <div className="experience-cards-div">
+                            {workExperiences.volunteer.map((card) => {
+                                return (
+                                    <ExperienceCard
+                                        cardInfo={{
+                                            company: card.company,
+                                            desc: card.desc,
+                                            date: card.date,
+                                            companylogo: card.companylogo,
+                                            role: card.role,
+                                            descBullets: card.descBullets
+                                        }}
+                                    />
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
                 </Fade>
             </div>
         );
