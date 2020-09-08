@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createRef } from "react";
 import "./ExperienceCard.css";
 import ColorThief from "colorthief";
+import emoji from "react-easy-emoji";
 
 export default function ExperienceCard({ cardInfo }) {
   const [colorArrays, setColorArrays] = useState([]);
@@ -34,8 +35,9 @@ export default function ExperienceCard({ cardInfo }) {
         <h5 className="experience-text-date">{cardInfo.date}</h5>
         <p className="subTitle experience-text-desc">{cardInfo.desc}</p>
         <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} />
+          <GetDescBullets descBullets={cardInfo.descBullets}/>
         </ul>
+        <a className="subTitle experience-link" href={cardInfo.productLink}>{cardInfo.productName? emoji("🔗"): null}{cardInfo.productName}</a>
       </div>
     </div>
   );

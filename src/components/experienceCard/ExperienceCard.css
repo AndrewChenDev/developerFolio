@@ -10,6 +10,11 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
 }
 
+.experience-link {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
 .experience-banner {
     background-position: center;
     background-repeat: no-repeat;

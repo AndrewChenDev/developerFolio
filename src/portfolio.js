@@ -136,11 +136,14 @@ const workExperiences = {
       company: "Boltz Technology",
       companylogo: require("./assets/images/boltz.png"),
       date: "10/2019 - 02/2020",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      desc: "Power-bank sharing",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+        "Worked on front end WeChat mini program, iOS and Android flutter project.",
+        "WeChat mini program: convert old code to highly reusable code and switch from ES5 to ES6.",
+        "Build iOS and Android app using Flutter."
+      ],
+      productName: "Boltz App",
+      productLink: "https://apps.apple.com/us/app/boltz/id1494273736"
     },
   ],
   volunteer: [
@@ -149,10 +152,10 @@ const workExperiences = {
       company: "Pick a Dish",
       companylogo: require("./assets/images/pick_a_dish.png"),
       date: "02/2019 - 04/2019",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      desc: "A personalized food concierge",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Backend search function, integrate with food delivery services.",
+        "Crawler script to claw through different restaurant menu."
       ]
     },
     {
@@ -160,10 +163,10 @@ const workExperiences = {
       company: "Heaven Bridge Church",
       companylogo: require("./assets/images/heavenbridge.png"),
       date: "04/2014 - Present,",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "projection slide",
+        "computer troubleshooting",
+        "weekly publication church bulletin."
       ]
     },
   ]
@@ -192,43 +195,6 @@ const bigProjects = {
     {
       image: require("./assets/images/nextuLogo.webp"),
       link: "http://nextu.se/"
-    }
-  ]
-};
-
-// Your Achievement Section Include Your Certification Talks and More
-
-const achievementSection = {
-
-  title: emoji("Achievements And Certifications 🏆 "),
-  subtitle: "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-
-  achivementsCards: [
-    {
-      title: "Google Code-In Finalist",
-      subtitle: "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      footerLink: [
-        { name: "Certification", url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing" },
-        { name: "Award Letter", url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing" },
-        { name: "Google Code-in Blog", url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html" }
-      ]
-    },
-    {
-      title: "Google Assistant Action",
-      subtitle: "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      footerLink: [{ name: "View Google Assistant Action", url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en" }]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      footerLink: [
-        { name: "Certification", url: "" },
-        { name: "Final Project", url: "https://pakistan-olx-1.firebaseapp.com/" }
-      ]
     }
   ]
 };
