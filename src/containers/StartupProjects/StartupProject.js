@@ -21,7 +21,7 @@ export default function StartupProject() {
               return (
                 <div className="repo-card-div" onClick={() => openProjectInNewWindow(project.link)}>
                   <h3>{project.title}</h3>
-                  <img alt="Saad Working" src={project.image}></img>
+                  <img alt="Andrew Working" src={project.image}></img>
                 </div>
               );
             })}

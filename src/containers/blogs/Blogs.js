@@ -36,7 +36,7 @@ class Blogs extends Component {
                                 return (
                                     <BlogCard
                                         blog={{
-                                            url: blog.url,
+                                            url: blog.link,
                                             // image: blog.image,
                                             title: blog.title.rendered,
                                             description: blog.excerpt.rendered
