@@ -39,7 +39,7 @@ class Blogs extends Component {
                                             url: blog.url,
                                             // image: blog.image,
                                             title: blog.title.rendered,
-                                            description: blog.content.rendered
+                                            description: blog.excerpt.rendered
                                         }}
                                     />
                                 );
