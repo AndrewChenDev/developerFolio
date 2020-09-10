@@ -19,7 +19,8 @@ export default function StartupProject() {
           <div className="startup-project-text">
             {bigProjects.projects.map(project => {
               return (
-                <div className="saaya-health-div" onClick={() => openProjectInNewWindow(project.link)}>
+                <div className="repo-card-div" onClick={() => openProjectInNewWindow(project.link)}>
+                  <h3>{project.title}</h3>
                   <img alt="Saad Working" src={project.image}></img>
                 </div>
               );

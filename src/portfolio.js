@@ -176,6 +176,7 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
+  title: 'Open Source Project',
   githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
   githubUserName: "andrew840513", // Change to your github username to view your profile in Contact Section.
   showGithubProfile :"true" // Set true or false to show Contact profile using Github, defaults to false 
@@ -185,16 +186,18 @@ const openSource = {
 // Some Big Projects You have worked with your company
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "Some companies that I helped to create their tech",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      link: "http://saayahealth.com/"
+      title: "Price Compare Crawler",
+      image: require("./assets/images/projectSteal.png"),
+      link: "http://mren.website/"
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      link: "http://nextu.se/"
+      title: "Boltz App",
+      image: require("./assets/images/boltzApp.png"),
+      link: "https://apps.apple.com/us/app/boltz/id1494273736"
     }
   ]
 };
@@ -211,44 +214,9 @@ const blogSection = {
   ]
 };
 
-// Talks Sections
-
-const talkSection = {
-  title: "TALKS",
-  subtitle: emoji("I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"),
-
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ]
-};
-
-// Podcast Section
-
-const podcastSection = {
-  title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: ["https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"]
-};
-
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
-  subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-3243454077",
+  subtitle: "Discuss a project or just want to say hi? My Inbox is open for all!",
   email_address: "andrew84051395@gmail.com"
 };
-
-//Twitter Section
-
-const twitterDetails = {
-
-  userName : "twitter"//Replace "twitter" with your twitter username without @
-  
-};
-export { greeting, socialMediaLinks, skillsSection, techStack, workExperiences, openSource, bigProjects, blogSection, talkSection, podcastSection, contactInfo , twitterDetails};
+export { greeting, socialMediaLinks, skillsSection, techStack, workExperiences, openSource, bigProjects, blogSection, contactInfo};

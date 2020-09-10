@@ -28,9 +28,18 @@
 .project-card-description {
   color: rgb(88, 96, 105);
 }
-.saaya-health-div,
-.nextu-div {
+.repo-card-div {
+  color: rgb(88, 96, 105);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 30px -15px;
+  border-radius: 10px;
+  padding: 0rem 2rem 2rem 2rem;
+  margin-right: 30px;
+  border: 1px solid #eeeeee;
   cursor: pointer;
+}
+.repo-card-div:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
 }
 
 @media (max-width: 768px) {

@@ -8,8 +8,8 @@ import Projects from "./projects/Projects";
 import Blogs from "./blogs/Blogs";
 import Footer from "../components/footer/Footer";
 import Top from "./topbutton/Top";
-import Profile from "./profile/Profile";
-
+import StartupProject from "./StartupProjects/StartupProject";
+import Contact from "./contact/Contact";
 export default class Main extends Component {
   render() {
     return (
@@ -21,8 +21,8 @@ export default class Main extends Component {
         <StackProgress />
         <WorkExperience />
         <Projects />
-
-        {/*<Profile />*/}
+        <StartupProject />
+        <Contact />
         <Footer />
         <Top />
       </div>
