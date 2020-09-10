@@ -12,7 +12,7 @@ export default function BlogCard({ blog }) {
   return (
     <div>
       <div class="blog-container" onClick={() => openUrlInNewTab(blog.url)}>
-        <a class="blog-card" href={blog.url} >
+        <a class="blog-card">
           <h3 className="blog-title">{blog.title}</h3>
           <p class="small" dangerouslySetInnerHTML={{__html: trimDesc}}></p>
           <div class="go-corner" >
