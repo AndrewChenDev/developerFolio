@@ -195,9 +195,14 @@ const bigProjects = {
       link: "http://mren.website/"
     },
     {
-      title: "Boltz App",
+      title: "Boltz App(iOS)",
       image: require("./assets/images/boltzApp.png"),
       link: "https://apps.apple.com/us/app/boltz/id1494273736"
+    },
+    {
+      title: "Boltz App(Android)",
+      image: require("./assets/images/boltzApp.png"),
+      link: "https://play.google.com/store/apps/details?id=com.boltzcharge.boltz_app&hl=en_US"
     }
   ]
 };
