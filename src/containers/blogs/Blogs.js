@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import "./Blog.css";
 import BlogCard from "../../components/blogCard/BlogCard";
-import {blogSection} from "../../portfolio";
+import {blogSection, socialMediaLinks} from "../../portfolio";
 import {Fade} from "react-reveal";
+import Button from "../../components/button/Button";
 
 class Blogs extends Component {
     constructor(props) {
@@ -46,6 +47,7 @@ class Blogs extends Component {
                             })}
                         </div>
                     </div>
+                    <Button text={"More Blog Post"} className="project-button" href="https://blog.andrew.ac" newTab={true} />
                 </div>
             </Fade>
         );
