@@ -19,7 +19,9 @@ class Blogs extends Component {
             result=>{
                 this.setState({blogs:result})
             }
-        )
+        ).catch(error=>{
+            console.log(error)
+        })
     }
 
     render() {
