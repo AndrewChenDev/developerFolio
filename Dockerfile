@@ -1,10 +1,8 @@
 # This file is the main docker file configurations
 
 # Official Node JS runtime as a parent image
-FROM node:current-alpine AS BUILD_IMAGE
 FROM node:14-alpine AS BUILD_IMAGE
 # couchbase sdk requirements
-RUN apk update && apk add yarn curl bash python g++ make && rm -rf /var/cache/apk/*
 RUN apk --update --no-cache add yarn curl bash python3 g++ make
 
 # install node-prune (https://github.com/tj/node-prune)
