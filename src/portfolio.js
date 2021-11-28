@@ -47,6 +47,14 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
+      skillName: "css3",
+      fontAwesomeClassname: "fab fa-sass"
+    },
+    {
+      skillName: "php",
+      fontAwesomeClassname: "fab fa-php"
+    },
+    {
       skillName: "bootstrap",
       fontAwesomeClassname: "fab fa-bootstrap"
     },
@@ -112,7 +120,7 @@ const techStack = {
   experience: [
     {
       Stack: "Frontend/Design",  //Insert stack or technology you have experience in
-      progressPercentage: "50%"  //Insert relative proficiency in percentage
+      progressPercentage: "70%"  //Insert relative proficiency in percentage
     },
     {
       Stack: "Backend",
@@ -131,6 +139,21 @@ const techStack = {
 const workExperiences = {
   viewExperiences: true, //Set it to true to show workExperiences Section
   experience: [
+    {
+      role: "Wordpress Developer",
+      company: "Lahoo Information Ltd",
+      companylogo: require("./assets/images/lahoo_logo.png"),
+      date: "10/2020 - Present",
+      desc: "News media company",
+      descBullets: [
+        "Improves Website site UX/UI",
+        "Increase website loading performance",
+        "Add addition feature and pages to the sites",
+        "Build custom Wordpress theme and plugin for clients"
+      ],
+      productName: "Lahoo.ca",
+      productLink: "https://lahoo.ca"
+    },
     {
       role: "Software Engineer",
       company: "Boltz Technology",
@@ -179,7 +202,7 @@ const openSource = {
   title: 'Open Source Project',
   githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
   githubUserName: "andrew840513", // Change to your github username to view your profile in Contact Section.
-  showGithubProfile :"true" // Set true or false to show Contact profile using Github, defaults to false 
+  showGithubProfile :"true" // Set true or false to show Contact profile using Github, defaults to false
 };
 
 
@@ -190,19 +213,29 @@ const bigProjects = {
   subtitle: "Some companies that I helped to create their tech",
   projects: [
     {
-      title: "Price Compare Crawler",
-      image: require("./assets/images/projectSteal.png"),
-      link: "http://mren.website/"
+      title: "Lahoo.ca",
+      image: require("./assets/images/lahoo.png"),
+      link: "https://lahoo.ca"
+    },
+    {
+      title: "Lahooto.ca",
+      image: require("./assets/images/lahooto.png"),
+      link: "https://lahooto.ca/"
+    },
+    {
+      title: "Apass.ca",
+      image: require("./assets/images/apass.png"),
+      link: "http://apass.ca/"
+    },
+    {
+      title: "Sarahzhang.ca",
+      image: require("./assets/images/sarahzhang.png"),
+      link: "https://sarahzhang.ca/"
     },
     {
       title: "Boltz App(iOS)",
       image: require("./assets/images/boltzApp.png"),
       link: "https://apps.apple.com/us/app/boltz/id1494273736"
-    },
-    {
-      title: "Boltz App(Android)",
-      image: require("./assets/images/boltzApp.png"),
-      link: "https://play.google.com/store/apps/details?id=com.boltzcharge.boltz_app&hl=en_US"
     }
   ]
 };

@@ -1,5 +1,5 @@
 .startup-projects-main {
-  display: flex;
+  /*display: flex;*/
 }
 
 .startup-projects-main > * {
@@ -23,6 +23,7 @@
 .startup-project-text {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .project-card-description {
@@ -34,7 +35,7 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 30px -15px;
   border-radius: 10px;
   padding: 0rem 2rem 2rem 2rem;
-  margin-right: 30px;
+  margin-bottom: 30px;
   border: 1px solid #eeeeee;
   cursor: pointer;
 }
@@ -42,6 +43,30 @@
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
 }
 
+@media (min-width: 769px) {
+  .repo-card-div {
+    width: calc(50% - 2rem - 2rem - 10px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .startup-projects-main {
+    display: flex;
+  }
+
+  .startup-project-text {
+    flex-wrap: nowrap;
+  }
+
+  .repo-card-div {
+    margin-right: 30px;
+    margin-bottom: 0;
+    width: unset;
+  }
+  .startup-projects-main > *{
+    flex: unset;
+  }
+}
 @media (max-width: 768px) {
   .starup-project-image {
     display: none;
