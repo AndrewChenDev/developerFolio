@@ -1,0 +1,78 @@
+.startup-projects-main {
+  /*display: flex;*/
+}
+
+.startup-projects-main > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.starup-project-image > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-card-head {
+  color: rgb(36, 41, 46);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0px;
+}
+
+.startup-project-text {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-card-description {
+  color: rgb(88, 96, 105);
+}
+.repo-card-div {
+  color: rgb(88, 96, 105);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 30px -15px;
+  border-radius: 10px;
+  padding: 0rem 2rem 2rem 2rem;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+}
+.repo-card-div:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
+}
+
+@media (min-width: 769px) {
+  .repo-card-div {
+    width: calc(50% - 2rem - 2rem - 10px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .startup-projects-main {
+    display: flex;
+  }
+
+  .startup-project-text {
+    flex-wrap: nowrap;
+  }
+
+  .repo-card-div {
+    margin-right: 30px;
+    margin-bottom: 0;
+    width: unset;
+  }
+  .startup-projects-main > *{
+    flex: unset;
+  }
+}
+@media (max-width: 768px) {
+  .starup-project-image {
+    display: none;
+  }
+  .project-subtitle{
+    font-size: 16px;
+    text-align: center;
+  }
+}
