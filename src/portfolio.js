@@ -18,7 +18,7 @@ const socialMediaLinks = {
 
     github: "https://github.com/andrew840513",
     linkedin: "https://www.linkedin.com/in/che-an-andrew-chen/",
-    gmail: "andrew84051395@gmail.com"
+    gmail: "andrew@andrew.ac"
     // Instagram and Twitter are also supported in the links!
 };
 
@@ -253,7 +253,7 @@ const blogSection = {
 const contactInfo = {
     title: emoji("Contact Me ☎️"),
     subtitle: "Discuss a project or just want to say hi? My Inbox is open for all!",
-    email_address: "andrew84051395@gmail.com"
+    email_address: "andrew@andrew.ac"
 };
 export {
     greeting,
