@@ -6,7 +6,7 @@ FROM node:14-alpine AS BUILD_IMAGE
 RUN apk --update --no-cache add yarn curl bash python3 g++ make
 
 # install node-prune (https://github.com/tj/node-prune)
-RUN curl -sfL https://install.goreleaser.com/github.com/tj/node-prune.sh | bash -s -- -b /usr/local/bin
+# RUN curl -sfL https://install.goreleaser.com/github.com/tj/node-prune.sh | bash -s -- -b /usr/local/bin
 # Set the working directory to ./app
 WORKDIR ./app
 
@@ -18,8 +18,8 @@ COPY . ./
 #create build
 RUN yarn run build
 # remove development dependencies
-RUN npm prune --production
-RUN /usr/local/bin/node-prune
+# RUN npm prune --production
+# RUN /usr/local/bin/node-prune
 
 # copy from build image
 FROM alpine:latest
