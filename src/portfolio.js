@@ -9,7 +9,7 @@ const greeting = {
     username: "Andrew Chen",
     title: "Hi I'm Andrew",
     subTitle: emoji("A passionate Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / Flutter and some other cool libraries and frameworks."),
-    resumeLink: "https://drive.google.com/file/d/1rZd-SBd03zkfAvC3Pj-AhDS16uoegpyH/view?usp=sharing"
+    resumeLink: "https://drive.google.com/file/d/1aJXdhaeQwXrxkrEF6n7SsohIybfusaDH/view?usp=sharing"
 };
 
 // Your Social Media Link
