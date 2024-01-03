@@ -1,27 +1,29 @@
 # This file is the main docker file configurations
 
 # Official Node JS runtime as a parent image
-FROM node:14-alpine AS BUILD_IMAGE
-# couchbase sdk requirements
-RUN apk --update --no-cache add yarn curl bash python3 g++ make
+FROM node:10.16.0-alpine
 
-# install node-prune (https://github.com/tj/node-prune)
-# RUN curl -sfL https://install.goreleaser.com/github.com/tj/node-prune.sh | bash -s -- -b /usr/local/bin
 # Set the working directory to ./app
-WORKDIR ./app
+WORKDIR /app
 
 # Install app dependencies
-COPY package.json yarn.lock ./
-# Install any needed packages
-RUN yarn install
-COPY . ./
-#create build
-RUN yarn run build
-# remove development dependencies
-# RUN npm prune --production
-# RUN /usr/local/bin/node-prune
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package.json ./
 
-# copy from build image
-FROM alpine:latest
-COPY --from=BUILD_IMAGE /app/build /app
-CMD cp -a /app/* /production
+RUN apk add --no-cache git
+
+# Install any needed packages
+RUN npm install
+
+# Audit fix npm packages
+RUN npm audit fix
+
+# Bundle app source
+COPY . /app
+
+# Make port 3000 available to the world outside this container
+EXPOSE 3000
+
+# Run app.js when the container launches
+CMD ["npm", "start"]
