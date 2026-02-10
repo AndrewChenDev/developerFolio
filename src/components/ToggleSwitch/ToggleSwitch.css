@@ -1,0 +1,29 @@
+/* Minimal CSS for toggle switch - pseudo-elements and :checked sibling selectors
+   that cannot be expressed purely with Tailwind utilities */
+
+.toggle-slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 28px;
+  left: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.4s;
+}
+
+.toggle-input:checked + .toggle-slider {
+  background-color: #2196f3;
+}
+
+.toggle-input:focus + .toggle-slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.toggle-input:checked + .toggle-slider::before,
+.toggle-input:checked + .toggle-slider > .toggle-emoji {
+  transform: translateX(26px);
+}

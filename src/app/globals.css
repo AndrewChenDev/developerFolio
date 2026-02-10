@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Agustina Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Agustina Regular"),
+    url("/fonts/Agustina.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@layer base {
+  html,
+  body {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply m-0 font-montserrat text-[19px] leading-[23px] antialiased;
+  }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+}
+
+@media (max-width: 1380px) {
+  html,
+  body {
+    font-size: 1rem;
+    line-height: normal;
+  }
+}
+
+/* Dark mode base */
+.dark-mode {
+  @apply bg-darkBg text-white transition-colors duration-100;
+}
+
+/* Global subTitle utility */
+.subTitle {
+  @apply text-subTitle;
+}
+
+/* Shared grey-color for code-like brackets */
+.grey-color {
+  @apply text-subTitle;
+}
