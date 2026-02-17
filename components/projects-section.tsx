@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { ExternalLink, Github } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { projects } from "@/data/portfolio-data"
@@ -27,11 +28,15 @@ export function ProjectsSection() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="relative overflow-hidden">
-                <img
+{project.image && (
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={600}
+                  height={192}
                   className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
               </div>
 

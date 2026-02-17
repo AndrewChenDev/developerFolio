@@ -80,7 +80,7 @@ export function ContactSection() {
             </div>
             <h3 className="mt-6 text-xl font-semibold text-foreground">Send me an email</h3>
             <p className="mt-2 max-w-sm text-muted-foreground">
-              Have a project in mind or just want to say hello? Drop me a line and I'll get back to you.
+              Have a project in mind or just want to say hello? Drop me a line and I&apos;ll get back to you.
             </p>
             <Button asChild size="lg" className="mt-6 gap-2">
               <a href="mailto:andrew@andrew.ac">
