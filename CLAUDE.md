@@ -4,16 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-- `pnpm dev` - Start dev server (port 3000)
-- `pnpm build` - Build static site (outputs to `/out`)
-- `pnpm lint` - Run ESLint
-- `pnpm start` - Start production server
+- `bun dev` - Start dev server (port 3000)
+- `bun run build` - Build static site (outputs to `/out`)
+- `bun lint` - Run ESLint
+- `bun start` - Start production server
 
 No test framework is configured.
 
 ## Architecture
 
-Single-page portfolio website built with **Next.js 16** (static export), **React 19**, **TypeScript**, and **Tailwind CSS 4**. Uses **shadcn/ui** (new-york style) with Radix UI primitives. Package manager is **pnpm**.
+Single-page portfolio website built with **Next.js 16** (static export), **React 19**, **TypeScript**, and **Tailwind CSS 4**. Uses **shadcn/ui** (new-york style) with Radix UI primitives. Package manager is **bun**.
 
 ### Key Structure
 
