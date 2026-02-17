@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: siteMetadata.description,
     url: siteMetadata.url,
     siteName: siteMetadata.title,
-    images: [{ url: siteMetadata.ogImage, width: 1200, height: 630 }],
+    images: [{ url: siteMetadata.ogImage, width: 1200, height: 630, alt: "Andrew Chen - Software Developer" }],
     locale: "en_US",
     type: "website",
   },
