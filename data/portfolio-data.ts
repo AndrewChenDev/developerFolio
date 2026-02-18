@@ -162,6 +162,7 @@ export interface Project {
   title: string
   description: string
   image?: string
+  imageAlt?: string
   technologies: string[]
   liveUrl?: string
   githubUrl?: string
@@ -173,6 +174,7 @@ export const projects: Project[] = [
     description:
       "Driver signup and onboarding page for the WhatsDish delivery platform. Built with Next.js featuring a streamlined registration flow for delivery drivers.",
     image: "/whatsdish-driver.png",
+    imageAlt: "WhatsDish driver signup web app showing registration form",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     liveUrl: "https://driver.whatsdish.com/",
   },
@@ -181,6 +183,7 @@ export const projects: Project[] = [
     description:
       "Internal operations portal managing 1,500+ leads and 60+ merchants for the WhatsDish delivery platform. Features order management, merchant onboarding, and sales pipeline tracking.",
     image: "/whatsdish-dashboard.png",
+    imageAlt: "WhatsDish operations dashboard showing merchant and lead management interface",
     technologies: ["Next.js", "Node.js", "TypeScript", "AWS"],
   },
   {
@@ -188,6 +191,7 @@ export const projects: Project[] = [
     description:
       "News media company website for the Chinese-Canadian community. Built and maintained using WordPress with custom themes and plugins for content management and user engagement.",
     image: "/lahoo.png",
+    imageAlt: "Lahoo.ca Chinese-Canadian news media website homepage",
     technologies: ["WordPress", "PHP", "JavaScript", "CSS", "MySQL"],
     liveUrl: "https://lahoo.ca/",
   },
@@ -196,6 +200,7 @@ export const projects: Project[] = [
     description:
       "A web application project built with modern web technologies. Designed and developed with a focus on user experience and performance.",
     image: "/apass.png",
+    imageAlt: "Apass.ca web application interface",
     technologies: ["JavaScript", "HTML5", "CSS3", "React.js", "Node.js"],
     liveUrl: "https://apass.ca/",
   },
@@ -204,6 +209,7 @@ export const projects: Project[] = [
     description:
       "A professional portfolio and personal website. Built with responsive design principles to showcase work across all devices.",
     image: "/sarahzhang.png",
+    imageAlt: "Sarahzhang.ca professional portfolio website with responsive design",
     technologies: ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
     liveUrl: "https://sarahzhang.ca/",
   },
@@ -212,6 +218,7 @@ export const projects: Project[] = [
     description:
       "Power-bank sharing mobile application developed with Flutter. Features real-time station tracking, QR code scanning, and integrated payment system for renting portable chargers.",
     image: "/boltzApp.png",
+    imageAlt: "Boltz power-bank sharing mobile app with station tracking and QR scanning",
     technologies: ["Flutter", "Dart", "Firebase", "iOS", "Android"],
     liveUrl: "https://apps.apple.com/app/boltz/id1488498090",
   },
@@ -275,7 +282,7 @@ export const navItems = [
 // =============================================
 export const siteMetadata = {
   title: `${personalInfo.name} | ${personalInfo.title}`,
-  description: "Personal portfolio website showcasing my work in web and mobile application development with JavaScript, React.js, Node.js, and Flutter",
+  description: "Andrew Chen is a Software Developer based in Vancouver, BC, specializing in full-stack web and mobile development with React, Next.js, Node.js, and Flutter.",
   url: "https://andrew.ac",
   ogImage: "/og-image.png",
 }
