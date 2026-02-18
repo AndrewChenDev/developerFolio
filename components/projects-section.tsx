@@ -29,15 +29,15 @@ export function ProjectsSection() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="relative overflow-hidden">
-{project.image && visibleClass && (
-                <Image
-                  src={project.image}
-                  alt={project.imageAlt ?? `Screenshot of ${project.title}`}
-                  width={600}
-                  height={192}
-                  loading="lazy"
-                  className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                {project.image && (
+                  <Image
+                    src={project.image}
+                    alt={project.imageAlt ?? `Screenshot of ${project.title}`}
+                    width={600}
+                    height={192}
+                    loading="lazy"
+                    className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
               </div>

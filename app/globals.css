@@ -128,6 +128,9 @@
   html {
     scroll-behavior: smooth;
   }
+  a, button {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring focus:outline-none;
+  }
 }
 
 /* GPU-optimized animation classes */

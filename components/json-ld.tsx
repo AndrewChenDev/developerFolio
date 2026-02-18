@@ -1,4 +1,4 @@
-import { personalInfo, socialLinks, siteMetadata, education, experiences, contactInfo } from "@/data/portfolio-data"
+import { personalInfo, socialLinks, siteMetadata, education, experiences, contactInfo, projects } from "@/data/portfolio-data"
 
 export function JsonLd() {
   const currentEmployer = experiences[0]
@@ -53,10 +53,24 @@ export function JsonLd() {
     },
   }
 
+  const projectSchemas = projects.map((project) => ({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: project.title,
+    description: project.description,
+    author: { "@type": "Person", name: personalInfo.name },
+    ...(project.technologies.length > 0 && { applicationCategory: "WebApplication" }),
+    ...(project.liveUrl && { url: project.liveUrl }),
+    ...(project.image && { image: `${siteMetadata.url}${project.image}` }),
+  }))
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      {projectSchemas.map((schema) => (
+        <script key={schema.name} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
     </>
   )
 }

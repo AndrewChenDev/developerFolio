@@ -13,6 +13,14 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMobileMenuOpen(false)
+    }
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [])
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
 
@@ -53,7 +61,7 @@ export function Navigation() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
+                  aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
                   className={cn(
                     "text-sm font-medium transition-colors duration-300",
                     activeSection === item.href.slice(1)
@@ -99,7 +107,7 @@ export function Navigation() {
                 <a
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
+                  aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
                   className={cn(
                     "block rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-300",
                     activeSection === item.href.slice(1)
