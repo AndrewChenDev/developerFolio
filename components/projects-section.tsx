@@ -29,7 +29,7 @@ export function ProjectsSection() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="relative overflow-hidden">
-{project.image && (
+{project.image && visibleClass && (
                 <Image
                   src={project.image}
                   alt={project.imageAlt ?? `Screenshot of ${project.title}`}
