@@ -35,6 +35,7 @@ export function ProjectsSection() {
                   alt={project.imageAlt ?? `Screenshot of ${project.title}`}
                   width={600}
                   height={192}
+                  loading="lazy"
                   className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 )}
