@@ -17,7 +17,10 @@ export function useFadeIn(threshold = 0.1): FadeInResult {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting)
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
       },
       { threshold },
     )

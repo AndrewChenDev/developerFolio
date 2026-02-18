@@ -213,4 +213,7 @@
   .animate-gpu {
     will-change: auto;
   }
+  .animate-bounce {
+    animation: none !important;
+  }
 }

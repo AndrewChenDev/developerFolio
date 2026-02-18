@@ -44,7 +44,7 @@ export function Navigation() {
           {/* Logo / Name */}
           <a href="#about" className="text-lg font-bold tracking-tight text-foreground">
             {personalInfo.name.split(" ")[0]}
-            <span className="text-primary">.</span>
+            <span className="text-primary" aria-hidden="true">.</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -53,6 +53,7 @@ export function Navigation() {
               <li key={item.href}>
                 <a
                   href={item.href}
+                  aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
                   className={cn(
                     "text-sm font-medium transition-colors duration-300",
                     activeSection === item.href.slice(1)
@@ -74,15 +75,19 @@ export function Navigation() {
               size="icon"
               className="md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
             >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileMenuOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         <div
+          id="mobile-menu"
+          aria-hidden={!isMobileMenuOpen}
           className={cn(
             "overflow-hidden transition-all duration-300 md:hidden",
             isMobileMenuOpen ? "max-h-96" : "max-h-0",
@@ -94,6 +99,7 @@ export function Navigation() {
                 <a
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
+                  aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
                   className={cn(
                     "block rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-300",
                     activeSection === item.href.slice(1)

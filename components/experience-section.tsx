@@ -9,11 +9,12 @@ export function ExperienceSection() {
   const { ref, visibleClass } = useFadeIn()
 
   return (
-    <section id="experience" ref={ref} className="relative overflow-hidden px-6 py-24 lg:px-24">
+    <section id="experience" ref={ref} aria-labelledby="experience-heading" className="relative overflow-hidden px-6 py-24 lg:px-24">
       <div className="pointer-events-none absolute -right-40 top-20 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="mx-auto max-w-4xl">
         <h2
+          id="experience-heading"
           className={`anim-fade-left animate-gpu mb-16 text-sm font-medium uppercase tracking-widest text-primary ${visibleClass}`}
         >
           Experience
@@ -43,7 +44,8 @@ export function ExperienceSection() {
                       className="inline-flex items-center gap-1 text-primary transition-colors hover:underline"
                     >
                       {exp.company}
-                      <ExternalLink className="h-4 w-4" />
+                      <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                      <span className="sr-only">(opens in new tab)</span>
                     </a>
                   ) : (
                     <span className="text-primary">{exp.company}</span>

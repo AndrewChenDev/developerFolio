@@ -11,14 +11,15 @@ export function HeroSection() {
     <section
       id="about"
       ref={ref}
+      aria-labelledby="about-heading"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-24 pt-20 text-center"
     >
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
 
       <div className="relative">
         <div className={`anim-fade-up animate-gpu ${visibleClass}`}>
-          <h1 className="text-5xl font-bold tracking-tight text-foreground md:text-7xl">{personalInfo.name}</h1>
-          <h2 className="mt-3 text-xl font-medium text-primary md:text-2xl">{personalInfo.title}</h2>
+          <h1 id="about-heading" className="text-5xl font-bold tracking-tight text-foreground md:text-7xl">{personalInfo.name}</h1>
+          <p className="mt-3 text-xl font-medium text-primary md:text-2xl">{personalInfo.title}</p>
         </div>
 
         <p
@@ -38,15 +39,16 @@ export function HeroSection() {
         <div className={`anim-zoom animate-gpu delay-400 mt-8 flex flex-wrap justify-center gap-4 ${visibleClass}`}>
           <Button asChild size="lg" className="gap-2">
             <a href="#contact">
-              <Mail className="h-4 w-4" />
+              <Mail className="h-4 w-4" aria-hidden="true" />
               Get in Touch
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="gap-2 bg-transparent">
             <a href={personalInfo.resumeUrl} target="_blank" rel="noreferrer">
-              <FileText className="h-4 w-4" />
+              <FileText className="h-4 w-4" aria-hidden="true" />
               View Resume
-              <ExternalLink className="h-3 w-3" />
+              <ExternalLink className="h-3 w-3" aria-hidden="true" />
+              <span className="sr-only">(opens in new tab)</span>
             </a>
           </Button>
         </div>
@@ -59,9 +61,9 @@ export function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors duration-300 hover:text-primary"
-              aria-label={link.label}
+              aria-label={`${link.label} (opens in new tab)`}
             >
-              <link.icon className="h-6 w-6" />
+              <link.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
@@ -72,7 +74,7 @@ export function HeroSection() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground transition-colors hover:text-foreground"
         aria-label="Scroll to experience"
       >
-        <ArrowDown className="h-6 w-6" />
+        <ArrowDown className="h-6 w-6" aria-hidden="true" />
       </a>
     </section>
   )

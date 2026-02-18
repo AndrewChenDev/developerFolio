@@ -8,17 +8,19 @@ import { Navigation } from "@/components/navigation"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <a href="#about" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground">
         Skip to content
       </a>
       <Navigation />
-      <HeroSection />
-      <ExperienceSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <EducationSection />
+      <main>
+        <HeroSection />
+        <ExperienceSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <EducationSection />
+      </main>
       <ContactSection />
-    </main>
+    </div>
   )
 }
