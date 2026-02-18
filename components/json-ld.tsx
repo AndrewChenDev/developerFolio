@@ -1,4 +1,4 @@
-import { personalInfo, socialLinks, siteMetadata, education, experiences } from "@/data/portfolio-data"
+import { personalInfo, socialLinks, siteMetadata, education, experiences, contactInfo } from "@/data/portfolio-data"
 
 export function JsonLd() {
   const currentEmployer = experiences[0]
@@ -10,7 +10,7 @@ export function JsonLd() {
     jobTitle: personalInfo.title,
     description: personalInfo.bio,
     url: siteMetadata.url,
-    email: "andrew@andrew.ac",
+    email: contactInfo[0].value,
     image: `${siteMetadata.url}${siteMetadata.ogImage}`,
     address: {
       "@type": "PostalAddress",
@@ -19,10 +19,10 @@ export function JsonLd() {
       addressCountry: "CA",
     },
     sameAs: socialLinks.filter((l) => l.label !== "Email").map((l) => l.href),
-    alumniOf: education.map((edu) => ({
+    alumniOf: [...new Map(education.map((edu) => [edu.school, {
       "@type": "EducationalOrganization",
       name: edu.school,
-    })),
+    }])).values()],
     worksFor: {
       "@type": "Organization",
       name: currentEmployer.company,
