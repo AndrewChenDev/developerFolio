@@ -8,7 +8,7 @@ export function EducationSection() {
   const { ref, visibleClass } = useFadeIn()
 
   return (
-    <section id="education" ref={ref} aria-labelledby="education-heading" className="relative overflow-hidden bg-card/50 px-6 py-24 lg:px-24">
+    <section id="education" ref={ref} aria-labelledby="education-heading" className="relative overflow-hidden px-6 py-24 lg:px-24">
       <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="mx-auto max-w-4xl">

@@ -10,7 +10,7 @@ export function ProjectsSection() {
   const { ref, visibleClass } = useFadeIn()
 
   return (
-    <section id="projects" ref={ref} aria-labelledby="projects-heading" className="relative overflow-hidden px-6 py-24 lg:px-24">
+    <section id="projects" ref={ref} aria-labelledby="projects-heading" className="relative overflow-hidden bg-card px-6 py-24 lg:px-24">
       <div className="pointer-events-none absolute -left-40 top-40 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="mx-auto max-w-6xl">

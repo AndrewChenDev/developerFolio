@@ -1,5 +1,6 @@
 "use client"
 
+import { Badge } from "@/components/ui/badge"
 import { skillCategories } from "@/data/portfolio-data"
 import { useFadeIn } from "@/hooks/use-fade-in"
 
@@ -7,7 +8,7 @@ export function SkillsSection() {
   const { ref, visibleClass } = useFadeIn()
 
   return (
-    <section id="skills" ref={ref} aria-labelledby="skills-heading" className="relative overflow-hidden bg-card/50 px-6 py-24 lg:px-24">
+    <section id="skills" ref={ref} aria-labelledby="skills-heading" className="relative overflow-hidden px-6 py-24 lg:px-24">
       <div className="pointer-events-none absolute -right-20 top-40 h-72 w-72 rounded-full bg-primary/5 blur-3xl" />
       <div className="pointer-events-none absolute -left-32 bottom-20 h-64 w-64 rounded-full bg-primary/5 blur-3xl" />
 
@@ -29,13 +30,13 @@ export function SkillsSection() {
                 </div>
                 <h3 className="font-semibold text-foreground">{category.title}</h3>
               </div>
-              <ul className="space-y-2">
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <li key={skill} className="text-sm text-muted-foreground">
+                  <Badge key={skill} variant="outline" className="border-primary/20 bg-primary/10 text-xs text-primary">
                     {skill}
-                  </li>
+                  </Badge>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>

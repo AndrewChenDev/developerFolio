@@ -146,7 +146,7 @@ export const skillCategories: SkillCategory[] = [
   {
     icon: Database,
     title: "Tools & Platforms",
-    skills: ["AWS (Lambda, ECS, S3, CloudFront, EC2, RDS, DynamoDB)", "Cloudflare (Workers, Pages, Durable Objects)", "Wrangler", "Vercel", "Heroku", "WordPress"],
+    skills: ["AWS Lambda", "AWS ECS", "AWS S3", "CloudFront", "EC2", "RDS", "DynamoDB", "Cloudflare Workers", "Cloudflare Pages", "Wrangler", "Vercel", "Heroku", "WordPress"],
   },
   {
     icon: Sparkles,

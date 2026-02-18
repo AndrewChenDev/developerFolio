@@ -9,7 +9,7 @@ export function ExperienceSection() {
   const { ref, visibleClass } = useFadeIn()
 
   return (
-    <section id="experience" ref={ref} aria-labelledby="experience-heading" className="relative overflow-hidden px-6 py-24 lg:px-24">
+    <section id="experience" ref={ref} aria-labelledby="experience-heading" className="relative overflow-hidden bg-card px-6 py-24 lg:px-24">
       <div className="pointer-events-none absolute -right-40 top-20 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="mx-auto max-w-4xl">
@@ -51,7 +51,14 @@ export function ExperienceSection() {
                     <span className="text-primary">{exp.company}</span>
                   )}
                 </h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{exp.description}</p>
+                <ul className="mt-2 space-y-1">
+                  {exp.description.split('. ').filter(Boolean).map((point, i) => (
+                    <li key={i} className="flex gap-2 text-sm text-muted-foreground">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" aria-hidden="true" />
+                      <span>{point.replace(/\.$/, '')}</span>
+                    </li>
+                  ))}
+                </ul>
                 <div
                   className={`anim-fade-up animate-gpu mt-4 flex flex-wrap gap-2 ${visibleClass}`}
                   style={{ transitionDelay: `${200 + index * 150}ms` }}

@@ -10,7 +10,7 @@ export function ContactSection() {
 
   return (
     <>
-      <section id="contact" ref={ref} aria-labelledby="contact-heading" className="relative overflow-hidden px-6 py-24 lg:px-24">
+      <section id="contact" ref={ref} aria-labelledby="contact-heading" className="relative overflow-hidden bg-card px-6 py-24 lg:px-24">
         <div className="pointer-events-none absolute -right-32 top-32 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
         <div className="pointer-events-none absolute -left-20 bottom-40 h-64 w-64 rounded-full bg-primary/5 blur-3xl" />
 
