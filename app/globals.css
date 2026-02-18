@@ -203,6 +203,12 @@
   }
 }
 
+/* View Transition crossfade for theme toggle */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 300ms;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .anim-fade-up, .anim-fade-left,
   .anim-fade-right, .anim-zoom {
@@ -214,6 +220,11 @@
     will-change: auto;
   }
   .animate-bounce {
+    animation: none !important;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
     animation: none !important;
   }
 }

@@ -7,11 +7,20 @@ import { useTheme } from "next-themes"
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
 
+  const toggleTheme = () => {
+    const newTheme = resolvedTheme === "dark" ? "light" : "dark"
+    if (document.startViewTransition) {
+      document.startViewTransition(() => setTheme(newTheme))
+    } else {
+      setTheme(newTheme)
+    }
+  }
+
   return (
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={toggleTheme}
       className="rounded-full bg-card/80 backdrop-blur-sm hover:bg-card"
       aria-label={resolvedTheme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
     >
