@@ -27,9 +27,9 @@ export const personalInfo = {
   title: "Software Developer",
   bio: "A passionate Software Developer with experience building Web and Mobile applications using JavaScript, React.js, Next.js, Node.js, and Flutter across delivery platforms, media companies, and fintech products.",
   currentWork: {
-    description: "Currently, I'm working as a Software Developer at",
-    company: "Origineer Consulting Inc",
-    role: "building full-stack applications for the WhatsDish delivery platform.",
+    description: "Experienced in building full-stack web and mobile applications across delivery platforms, media companies, and fintech products.",
+    company: "",
+    role: "",
   },
   resumeUrl: "https://resume.andrew.ac",
 }
@@ -65,7 +65,7 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    period: "03/2025 — Present",
+    period: "03/2025 — 03/2026",
     title: "Software Developer",
     company: "Origineer Consulting Inc",
     companyUrl: "https://origineer.co",

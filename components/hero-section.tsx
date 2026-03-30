@@ -31,9 +31,7 @@ export function HeroSection() {
         <p
           className={`anim-fade-up animate-gpu delay-300 mx-auto mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground ${visibleClass}`}
         >
-          {personalInfo.currentWork.description}{" "}
-          <span className="font-medium text-foreground">{personalInfo.currentWork.company}</span>,{" "}
-          {personalInfo.currentWork.role}
+          {personalInfo.currentWork.description}
         </p>
 
         <div className={`anim-zoom animate-gpu delay-400 mt-8 flex flex-wrap justify-center gap-4 ${visibleClass}`}>
