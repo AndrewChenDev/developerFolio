@@ -65,7 +65,7 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    period: "03/2025 — 03/2026",
+    period: "03/2025 — 04/2026",
     title: "Software Developer",
     company: "Origineer Consulting Inc",
     companyUrl: "https://origineer.co",
