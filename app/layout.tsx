@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import { ThemeProvider } from "@/components/theme-provider"
 import { JsonLd } from "@/components/json-ld"
 import { siteMetadata } from "@/data/portfolio-data"
@@ -79,6 +80,11 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          strategy="afterInteractive"
+          data-cf-beacon='{"token": "8adaa2d5bde14506898f0956f74e5a97"}'
+        />
       </body>
     </html>
   )
