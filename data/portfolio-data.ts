@@ -13,8 +13,8 @@ import {
   Smartphone,
   Container,
   Sparkles,
+  FlaskConical,
   GraduationCap,
-  BookOpen,
   MapPin,
 } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
@@ -48,7 +48,7 @@ export const socialLinks = [
 // =============================================
 export const contactInfo = [
   { icon: Mail, label: "Email", value: "andrew@andrew.ac", href: "mailto:andrew@andrew.ac" },
-  { icon: MapPin, label: "Location", value: "Vancouver, BC", href: null },
+  { icon: MapPin, label: "Location", value: "Coquitlam, BC", href: null },
 ]
 
 // =============================================
@@ -68,42 +68,42 @@ export const experiences: Experience[] = [
     period: "03/2025 — 04/2026",
     title: "Software Developer",
     company: "Origineer Consulting Inc",
-    companyUrl: "https://origineer.co",
+    companyUrl: "https://www.origineer.ca",
     description:
-      "Built operation and sales portals managing 1,500+ leads and 60+ merchants. Developed Node.js microservices for order and menu management on Heroku, AWS Lambda, and Docker/ECS. Led WhatsDish delivery driver application development using Next.js. Integrated Deliverect POS API for order management.",
-    skills: ["Next.js", "Node.js", "TypeScript", "AWS Lambda", "Docker", "ECS", "Heroku"],
+      "Built the company's first internal operations and sales platform with Next.js, React, TypeScript, and DynamoDB, designing REST APIs and role-based access control to centralize lead tracking and merchant onboarding across 1,500+ leads and 60+ merchants. Developed internal admin dashboards with React and Node.js, replacing manual database queries with self-serve workflows for user management, transactions, and automated reporting, cutting monthly reporting time by 82%. Refactored an 8,000-line monolithic codebase into modular, documented components using AI-assisted tooling (Claude Code, Codex). Integrated the Deliverect POS API to connect restaurant partners with UberEats and DoorDash, enabling merchants to grow order revenue by 40%+. Delivered a driver signup flow end to end with a responsive React front end and Node.js REST APIs on serverless AWS Lambda.",
+    skills: ["Next.js", "React", "Node.js", "TypeScript", "DynamoDB", "AWS Lambda", "Docker", "ECS"],
   },
   {
-    period: "10/2020 — 12/2024",
+    period: "02/2020 — 03/2025",
     title: "Full Stack Developer",
     company: "Lahoo Information Ltd",
     companyUrl: "https://lahoo.ca",
     description:
-      "Created full-stack applications with Next.js, PHP, and MySQL, achieving 300% load time reduction. Converted Figma designs to responsive React components with Tailwind CSS. Deployed AWS infrastructure including EC2 Auto-scaling, ECS, CloudFront, ELB, S3, and RDS.",
-    skills: ["Next.js", "React", "PHP", "MySQL", "Tailwind CSS", "AWS", "Figma"],
+      "Owned the full web stack from front-end development to hosting and server maintenance, building applications with Next.js, PHP, and MySQL and leading on-call for site reliability. Re-platformed a monolithic WordPress site into a decoupled Next.js front end with SSR and static generation, cutting page load time by 93% to 600ms. Deployed and tuned AWS infrastructure (EC2 auto-scaling, ECS, CloudFront, ELB, S3, RDS) with CI/CD pipelines (GitHub Actions, CodePipeline) and Terraform, reducing monthly server costs by 74%. Translated Figma mockups into responsive React components styled with Tailwind CSS, standardizing the front-end build across the company's web properties.",
+    skills: ["Next.js", "React", "PHP", "MySQL", "Tailwind CSS", "AWS", "Terraform", "Figma"],
   },
   {
     period: "10/2019 — 02/2020",
-    title: "Software Engineer",
+    title: "Software Developer Intern",
     company: "Boltz Technology",
     description:
-      "Developed a power-bank sharing mobile application using Flutter. Built cross-platform iOS and Android apps with real-time features and payment integration.",
+      "Built cross-platform mobile app features with Flutter as a front-end intern, redesigning component sizing and layout from user feedback to improve UI consistency, ease of use, and performance across devices.",
     skills: ["Flutter", "Dart", "Firebase", "iOS", "Android"],
   },
   {
     period: "02/2019 — 04/2019",
-    title: "Assistant Backend Developer",
+    title: "Assistant Backend Developer (Volunteer)",
     company: "Pick a Dish",
     description:
       "Assisted in backend development for a food-related application. Worked with Node.js and database technologies to build and maintain RESTful APIs.",
     skills: ["Node.js", "JavaScript", "REST APIs", "Database", "Git"],
   },
   {
-    period: "04/2014 — Present",
-    title: "IT Specialist",
+    period: "04/2014 — 2021",
+    title: "IT Specialist (Volunteer)",
     company: "Heaven Bridge Church",
     description:
-      "Managing IT infrastructure and providing technical support. Maintaining website and digital presence for the organization.",
+      "Managed IT infrastructure and provided technical support. Maintained website and digital presence for the organization.",
     skills: ["IT Support", "Web Development", "Networking", "WordPress"],
   },
 ]
@@ -126,12 +126,12 @@ export const skillCategories: SkillCategory[] = [
   {
     icon: Globe,
     title: "Frontend",
-    skills: ["HTML5", "CSS3", "SASS", "React.js", "Next.js", "Tailwind CSS", "Figma"],
+    skills: ["HTML5", "CSS3", "SASS", "React.js", "Next.js", "Redux", "Tailwind CSS", "Responsive Design", "Figma"],
   },
   {
     icon: Server,
     title: "Backend",
-    skills: ["Node.js", "Express.js", "Bun", "Firebase", "MySQL", "Redis", "REST APIs"],
+    skills: ["Node.js", "Express.js", "Bun", "Firebase", "MySQL", "PostgreSQL", "Redis", "REST APIs", "GraphQL", "WebSockets", "JWT", "OAuth 2.0", "Microservices"],
   },
   {
     icon: Smartphone,
@@ -141,17 +141,22 @@ export const skillCategories: SkillCategory[] = [
   {
     icon: Container,
     title: "DevOps",
-    skills: ["Docker", "Serverless", "GitHub Actions", "Nginx", "CentOS", "Git", "pnpm"],
+    skills: ["Docker", "Kubernetes", "Serverless", "GitHub Actions", "CodePipeline", "CI/CD", "Terraform", "CloudFormation", "Nginx", "Linux", "CentOS", "Git", "pnpm"],
   },
   {
     icon: Database,
     title: "Tools & Platforms",
-    skills: ["AWS Lambda", "AWS ECS", "AWS S3", "CloudFront", "EC2", "RDS", "DynamoDB", "Cloudflare Workers", "Cloudflare Pages", "Wrangler", "Vercel", "Heroku", "WordPress"],
+    skills: ["AWS Lambda", "AWS ECS", "AWS S3", "CloudFront", "EC2", "RDS", "DynamoDB", "EventBridge", "API Gateway", "CloudWatch", "SQS", "Cloudflare Workers", "Cloudflare Pages", "Wrangler", "Vercel", "Heroku", "WordPress", "Jira"],
   },
   {
     icon: Sparkles,
     title: "AI & ML",
-    skills: ["Claude Code", "GitHub Copilot", "MCP", "Prompt Engineering"],
+    skills: ["Claude Code", "Codex", "GitHub Copilot", "MCP", "RAG", "Agentic AI", "Prompt Engineering"],
+  },
+  {
+    icon: FlaskConical,
+    title: "Testing & Practices",
+    skills: ["Jest", "Playwright", "Unit & Integration Testing", "Agile/Scrum"],
   },
 ]
 
@@ -220,7 +225,6 @@ export const projects: Project[] = [
     image: "/boltzApp.png",
     imageAlt: "Boltz power-bank sharing mobile app with station tracking and QR scanning",
     technologies: ["Flutter", "Dart", "Firebase", "iOS", "Android"],
-    liveUrl: "https://apps.apple.com/app/boltz/id1488498090",
   },
 ]
 
@@ -243,14 +247,6 @@ export const education: Education[] = [
     period: "Jan 2018 — Mar 2019",
     description:
       "Completed an intensive program covering software development, web technologies, databases, and system administration. Hands-on experience with modern development tools and methodologies.",
-  },
-  {
-    icon: BookOpen,
-    degree: "Certificate in Computer Systems",
-    school: "British Columbia Institute of Technology (BCIT)",
-    period: "Jan 2017 — Apr 2018",
-    description:
-      "Foundation program in computer systems covering programming fundamentals, networking, and IT infrastructure.",
   },
 ]
 
@@ -282,7 +278,7 @@ export const navItems = [
 // =============================================
 export const siteMetadata = {
   title: `${personalInfo.name} | ${personalInfo.title}`,
-  description: "Andrew Chen is a Software Developer based in Vancouver, BC, specializing in full-stack web and mobile development with React, Next.js, Node.js, and Flutter.",
+  description: "Andrew Chen is a Software Developer based in Coquitlam, BC, specializing in full-stack web and mobile development with React, Next.js, Node.js, and Flutter.",
   url: "https://andrew.ac",
   ogImage: "/og-image.png",
 }
